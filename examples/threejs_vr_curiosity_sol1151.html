@@ -1,0 +1,133 @@
+<!--
+
+threejs_vr_curiosity_sol1151.html
+
+https://github.com/Physicslibrary/Threejs-VR-Curiosity-Navcams
+
+MIT License
+
+Copyright (c) 2020 Hartwell Fong
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+February 2020.
+
+Explore Curiosity Navcams 3D images with Threejs VR.
+
+Hardware
+Oculus Quest
+
+Software
+Oculus Browser (Oculus Quest Firmware update 13.0 or later).
+
+Credits
+
+sol1151-wheel-measure.glb was made from image data:
+
+https://mars.nasa.gov/msl/home/
+
+using Blender-Navcam-Importer:
+
+https://github.com/phaseIV/Blender-Navcam-Importer
+
+https://www.blender.org/
+
+https://threejs.org/
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Curiosity Navcam Sol 1151</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>		
+	</head>
+	<body>
+
+	<script type="module">
+
+	import * as THREE from '../build/three.module.js';
+	import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+	import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
+	import { VRButton } from './jsm/webxr/VRButton.js';
+
+	var camera, scene, renderer, mesh, container;
+
+	init();
+	animate();
+
+	function init() {
+
+		container = document.createElement('div');
+		document.body.appendChild(container);
+				
+		camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100);
+
+		scene = new THREE.Scene();
+		scene.background = new THREE.Color(0x404040);
+
+		renderer = new THREE.WebGLRenderer({antialias: true});
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(window.innerWidth, window.innerHeight);
+
+		renderer.outputEncoding = THREE.GammaEncoding;
+		renderer.gammaFactor = 2;
+
+		container.appendChild(renderer.domElement);
+
+		document.body.appendChild(VRButton.createButton(renderer));
+		renderer.xr.enabled = true;
+
+		var dracoLoader = new DRACOLoader();
+		dracoLoader.setDecoderPath('./js/lib/draco/gltf/');
+		var loader = new GLTFLoader();
+		loader.setDRACOLoader(dracoLoader);
+
+		loader.load( './models/sol1151-wheel-measure.glb', function (gltf) {
+
+			mesh = gltf.scene;				
+			mesh.scale.set(1,1,1);
+			mesh.position.set(0,0,-0.25)
+			mesh.rotation.set(0,0,0);
+			scene.add( mesh );
+
+		} );
+
+	}
+						
+	function animate() {
+
+		renderer.setAnimationLoop(animate);
+		render();
+
+	}
+
+	function render() {
+
+		renderer.render( scene, camera );
+
+	}
+
+</script>
+</body>
+</html>
