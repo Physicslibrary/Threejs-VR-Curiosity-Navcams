@@ -22,6 +22,8 @@ Oculus Browser (Oculus Quest Firmware update 13.0 or later).
 
 No installation. In Oculus Quest, open Oculus Browser and go to link:
 
+[https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html)
+
 # Credits
 
 Go to Curiosity, Multimedia, Raw Images in link:
