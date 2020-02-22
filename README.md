@@ -26,6 +26,10 @@ No installation. In Oculus Quest, open Oculus Browser and link:
 
 The file sol1151_wheel_measure.glb shows one of Curiosity's six wheels on the lower right. Any Navcam image with wheel(s) was selected because a wheel diameter is used in Blender to scale the 3D mesh. The author of Blender-Navcam-Importer has stated that, "resulting mesh...is in no way scientifically accurate".
 
+If no Oculus Quest, try this: (tested on 2018 iPad 9.7"/iPadOS 13/Safari, Windows 10/Google Chrome)
+
+[https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html)
+
 # Credits
 
 Go to Curiosity, Multimedia, Raw Images in link:
