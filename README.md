@@ -12,7 +12,7 @@ Stereoscopic view.<br>
 
 # Hardware
 
-Oculus Quest tested (6DoF headset/controllers)..<br>
+Oculus Quest tested (6DoF headset/controllers).<br>
 
 # Software
 
