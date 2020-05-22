@@ -31,12 +31,12 @@ February 2020.
 Explore Curiosity Navcams 3D images with Threejs VR.
 
 Hardware
-Oculus Quest
+Oculus Quest tested (6DoF headset/controllers).
 
 Software
-Oculus Browser (Oculus Quest Firmware update 13.0 or later).
+Oculus Browser (Quest update > 17.0).
 
-Credits
+References
 
 sol1151-wheel-measure.glb was made from image data:
 
@@ -117,8 +117,7 @@ https://threejs.org/
 						
 	function animate() {
 
-		renderer.setAnimationLoop(animate);
-		render();
+		renderer.setAnimationLoop(render);
 
 	}
 
