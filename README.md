@@ -34,9 +34,9 @@ If no Oculus Quest (tested 2018 9.7" iPad/iPadOS 13/Safari, Windows 10/Google Ch
 
 # Stereoscopic views of Sol 1431
 
-[https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html)
+[https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol_1431.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol_1431.html)
 
-The main webpage is.<br>
+This project uses images taken by Curiosity Navcam.<br>
 
 https://mars.nasa.gov/
 
