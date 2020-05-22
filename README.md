@@ -36,6 +36,24 @@ If no Oculus Quest (tested 2018 9.7" iPad/iPadOS 13/Safari, Windows 10/Google Ch
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html)
 
+The main webpage is.<br>
+
+https://mars.nasa.gov/
+
+Lot of excellent materials. Do a search for "raw images".<br>
+
+http://mars.jpl.nasa.gov/msl/multimedia/raw/
+
+The Sol 1431 VR experience is created from left image.<br>
+
+https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01431/opgs/edr/ncam/NLB_524534514EDR_F0562034NCAM00280M_.JPG
+
+And by changing "NLB" to "NRB", get corresponding right image.<br>
+
+https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01431/opgs/edr/ncam/NRB_524534514EDR_F0562034NCAM00280M_.JPG
+
+Sometimes a left image is available but a matching right image is not available. Move to other images.<br>
+
 # Making Sol 1151 .glb (Feb 20, 2020)
 
 # References
