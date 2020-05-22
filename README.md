@@ -12,27 +12,31 @@ Stereoscopic view.<br>
 
 # Hardware
 
-Oculus Quest.<br>
+Oculus Quest tested (6DoF headset/controllers)..<br>
 
 # Software
 
-Oculus Browser (Oculus Quest Firmware update 13.0 or later).
+Oculus Browser (tested Quest update > 17.0).
 
 # Installation
 
-No installation. In Oculus Quest, open Oculus Browser and link:
+No installation.<br>
+
+In Oculus Quest, open Oculus Browser and link:<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html)
 
 The file sol1151_wheel_measure.glb shows one of Curiosity's six wheels on the lower right. Any Navcam image with wheel(s) was selected because a wheel diameter is used in Blender to scale the 3D mesh. The author of Blender-Navcam-Importer has stated that, "resulting mesh...is in no way scientifically accurate".
 
-If no Oculus Quest, try: (tested on 2018 9.7" iPad/iPadOS 13/Safari, Windows 10/Google Chrome/Firefox)
+If no Oculus Quest (tested 2018 9.7" iPad/iPadOS 13/Safari, Windows 10/Google Chrome/Firefox, Raspberry Pi 3 B+/Raspbian Buster).<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html)
 
-# Credits
+# Making Sol 1151 .glb (experimental Feb 20, 2020)
 
-Go to Curiosity, Multimedia, Raw Images in link:
+# References
+
+Go to Curiosity, Multimedia, Raw Images in link:<br>
 
 [https://mars.nasa.gov/msl/home/](https://mars.nasa.gov/msl/home/)<br>
 
@@ -44,19 +48,15 @@ To find the image used to make sol1151_wheel_measure.glb, enter 1151 for Sol and
 
 [Raw image used to make sol1151_wheel_measure.glb](https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01151/opgs/edr/ncam/NLB_499684496EDR_F0501222NCAM00354M_.JPG)<br>
 
-A Blender addon is used to import Curiosity Navcams.
+A Blender addon is used to import Curiosity Navcams.<br>
 
 [https://github.com/phaseIV/Blender-Navcam-Importer](https://github.com/phaseIV/Blender-Navcam-Importer)
 
-The Blender-Navcam-Importer github has an excellent introduction about the addon.
+The Blender-Navcam-Importer github has an excellent introduction about the addon.<br>
 
-Blender 2.82 is used to export "glTF Binary" sol1511-wheel-measure.glb with Decimate Modifier(Ratio 0.1) and Draco compression. 
+Blender 2.82 is used to export "glTF Binary" sol1511-wheel-measure.glb with Decimate Modifier(Ratio 0.1) and Draco compression.<br>
 
 [https://www.blender.org/](https://www.blender.org/)
-
-# Making Sol 1151 .glb (experimental Feb 20, 2020)
-
-# References
 
 [https://mars.nasa.gov/msl/spacecraft/rover/cameras/#navcams](https://mars.nasa.gov/msl/spacecraft/rover/cameras/#navcams)
 
@@ -66,15 +66,15 @@ Blender 2.82 is used to export "glTF Binary" sol1511-wheel-measure.glb with Deci
 
 [https://github.com/mrdoob/three.js/](https://github.com/mrdoob/three.js/)
 
-Three.js examples is the best place to learn and experiment:
+Three.js examples is the best place to learn and experiment:<br>
 
 [https://github.com/mrdoob/three.js/tree/dev/examples](https://github.com/mrdoob/three.js/tree/dev/examples)
 
-Three.js' excellent documentation on how to convert WebGL examples to WebVR:
+Three.js' excellent documentation on how to convert WebGL examples to WebVR:<br>
 
 [https://threejs.org/docs/index.html#manual/en/introduction/How-to-create-VR-content](https://threejs.org/docs/index.html#manual/en/introduction/How-to-create-VR-content)
 
-Three.js example of how to load .glb file:
+Three.js example of how to load .glb file:<br>
 
 [https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_gltf.html](https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_gltf.html)
 
