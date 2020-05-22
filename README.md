@@ -22,7 +22,7 @@ Oculus Browser (tested Quest update > 17.0).
 
 No installation.<br>
 
-In Oculus Quest, open Oculus Browser and link:<br>
+In Oculus Quest, open Oculus Browser and link (let browser finished loading before "Enter VR").<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html)
 
@@ -34,9 +34,11 @@ If no Oculus Quest (tested 2018 9.7" iPad/iPadOS 13/Safari, Windows 10/Google Ch
 
 # Stereoscopic views of Sol 1431
 
+Let browser finished loading before "Enter VR".<br>
+
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol_1431.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol_1431.html)
 
-This project uses images taken by Curiosity Navcam.<br>
+This project uses images taken by Curiosity Navcams.<br>
 
 https://mars.nasa.gov/
 
@@ -57,6 +59,12 @@ Sometimes a left image is available but a matching right image is not available.
 # Making Sol 1151 .glb (Feb 20, 2020)
 
 # References
+
+Images NLB_524534514EDR_F0562034NCAM00280M_.JPG and NRB_524534514EDR_F0562034NCAM00280M_.JPG<br>
+Courtesy NASA/JPL-Caltech.<br>
+
+JPL Image Use Policy<br>
+https://www.jpl.nasa.gov/imagepolicy/
 
 Go to Curiosity, Multimedia, Raw Images in link:<br>
 
