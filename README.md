@@ -32,7 +32,7 @@ If no Oculus Quest (tested 2018 9.7" iPad/iPadOS 13/Safari, Windows 10/Google Ch
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html)
 
-# Stereoscopic views of Sol 1431
+# Stereoscopic view of Sol 1431
 
 Let browser finished loading before "Enter VR".<br>
 
