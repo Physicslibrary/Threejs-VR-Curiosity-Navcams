@@ -1,4 +1,4 @@
-# Threejs-VR-Curiosity-Navcams (under construction)
+# Threejs-VR-Curiosity-Navcams (updating)
 
 Explore Curiosity Navcams 3D images in Oculus Quest.
 
@@ -22,7 +22,7 @@ Oculus Browser (tested Quest update > 17.0).
 
 No installation.<br>
 
-In Oculus Quest, open Oculus Browser and link (let browser finished loading before "Enter VR").<br>
+In Oculus Quest, open Oculus Browser and link (let browser finish loading before "Enter VR").<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html)
 
@@ -34,7 +34,7 @@ If no Oculus Quest (tested 2018 9.7" iPad/iPadOS 13/Safari, Windows 10/Google Ch
 
 # Stereoscopic view of Sol 1431
 
-Let browser finished loading before "Enter VR".<br>
+Let browser finish loading before "Enter VR".<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol_1431.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol_1431.html)
 
