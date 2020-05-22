@@ -26,13 +26,15 @@ In Oculus Quest, open Oculus Browser and link:<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol1151.html)
 
-The file sol1151_wheel_measure.glb shows one of Curiosity's six wheels on the lower right. Any Navcam image with wheel(s) was selected because a wheel diameter is used in Blender to scale the 3D mesh. The author of Blender-Navcam-Importer has stated that, "resulting mesh...is in no way scientifically accurate".
+File sol1151_wheel_measure.glb shows one of Curiosity's six wheels on the lower right. Any Navcam image with wheel(s) is selected because a wheel is used in Blender to scale the 3D mesh. The author of Blender-Navcam-Importer has stated that, "resulting mesh...is in no way scientifically accurate". Nevertheless, the result does not appear distorted or unusual.
 
 If no Oculus Quest (tested 2018 9.7" iPad/iPadOS 13/Safari, Windows 10/Google Chrome/Firefox, Raspberry Pi 3 B+/Raspbian Buster).<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_curiosity_sol1151.html)
 
-# Making Sol 1151 .glb (experimental Feb 20, 2020)
+# Stereoscopic views of 
+
+# Making Sol 1151 .glb (Feb 20, 2020)
 
 # References
 
