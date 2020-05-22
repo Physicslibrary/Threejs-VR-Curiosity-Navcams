@@ -38,6 +38,12 @@ Let browser finish loading before "Enter VR".<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol_1431.html](https://physicslibrary.github.io/Threejs-VR-Curiosity-Navcams/examples/threejs_vr_curiosity_sol_1431.html)
 
+In front are two images combined as one stereoscopic view using three.js. The left and right Navcams are separated by 42 centimeters apart so it is not what a person would see standing there, someday. Humans IPD averages from 5.1 to 7.7 cm.<br>
+
+The image on the left is a monoscopic view of NLB_524534514EDR_F0562034NCAM00280M_.jpeg.<br>
+
+The 3D model on the right is constructed from two images NLB_524534514EDR_F0562034NCAM00280M_.jpeg and NRB_524534514EDR_F0562034NCAM00280M_.jpeg using Blender-Navcam-Importer.<br>
+
 This project uses images taken by Curiosity Navcams.<br>
 
 https://mars.nasa.gov/
@@ -107,5 +113,8 @@ Three.js' excellent documentation on how to convert WebGL examples to WebVR:<br>
 Three.js example of how to load .glb file:<br>
 
 [https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_gltf.html](https://github.com/mrdoob/three.js/blob/dev/examples/webgl_loader_gltf.html)
+
+https://en.wikipedia.org/wiki/Pupillary_distance
+
 
 <br>Copyright (c) 2020 Hartwell Fong
