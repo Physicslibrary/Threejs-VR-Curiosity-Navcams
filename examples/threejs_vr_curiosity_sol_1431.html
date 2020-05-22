@@ -1,0 +1,192 @@
+<!--
+
+threejs_vr_curiosity_sol1151.html
+
+https://github.com/Physicslibrary/Threejs-VR-Curiosity-Navcams
+
+MIT License
+
+Copyright (c) 2020 Hartwell Fong
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+May 2020.
+
+Explore Curiosity Navcams 3D images with Threejs VR.
+
+Hardware
+Oculus Quest tested (6DoF headset/controllers).
+
+Software
+Oculus Browser (Quest update > 17.0).
+
+References
+
+https://mars.nasa.gov/msl/home/
+
+using Blender-Navcam-Importer:
+
+https://github.com/phaseIV/Blender-Navcam-Importer
+
+https://www.blender.org/
+
+https://threejs.org/
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Curiosity Navcam Sol 1431</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>		
+	</head>
+	<body>
+
+	<script type="module">
+
+import * as THREE from '../build/three.module.js';
+import { VRButton } from './jsm/webxr/VRButton.js';
+import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
+
+var camera, scene, renderer;
+var controller;
+var controller2;
+var controller_box;
+var controller_box2;
+var object;
+var mesh;
+
+init();
+animate();
+
+function init() {
+
+	scene = new THREE.Scene();
+	scene.background = new THREE.Color(0x505050);
+
+	camera = new THREE.PerspectiveCamera(70, window.innerWidth/window.innerHeight, 0.5, 100);
+	camera.layers.enable(1);
+
+	renderer = new THREE.WebGLRenderer({antialias: true});
+	renderer.setPixelRatio(window.devicePixelRatio);
+	renderer.setSize(window.innerWidth, window.innerHeight);
+
+// Model curiosity-524534514-jpg-draco.glb appears dim, can increase its brightness by uncommenting two lines. However, this make others bright.
+
+//	renderer.outputEncoding = THREE.GammaEncoding;
+//	renderer.gammaFactor = 2.2;
+
+	document.body.appendChild(renderer.domElement);
+	document.body.appendChild(VRButton.createButton(renderer));
+	renderer.xr.enabled = true;
+
+	controller = renderer.xr.getController(0); // right hand controller
+	scene.add(controller);
+
+	controller2 = renderer.xr.getController(1); // left hand controller
+	scene.add(controller2);
+
+	var box = new THREE.BoxBufferGeometry(0.05,0.05,0.05);
+
+	controller_box = new THREE.Mesh(box, new THREE.MeshBasicMaterial({color: 0xffffff}));
+	controller_box.material.wireframe = true;
+
+	controller_box2 = new THREE.Mesh(box, new THREE.MeshBasicMaterial({color: 0xffffff}));
+	controller_box2.material.wireframe = true;
+
+	controller.add(controller_box);
+	controller2.add(controller_box2);
+
+	object = new THREE.Object3D();
+
+	var loader = new THREE.TextureLoader();
+
+	var texture = loader.load("models/NRB_524534514EDR_F0562034NCAM00280M_.jpeg");
+
+	var geometry = new THREE.PlaneGeometry(2,2,4);	
+	var material = new THREE.MeshBasicMaterial({map: texture, side: THREE.DoubleSide});
+	var plane = new THREE.Mesh(geometry, material);
+	plane.layers.set(2);
+	object.add(plane);
+
+	loader = new THREE.TextureLoader();
+
+	texture = loader.load("models/NLB_524534514EDR_F0562034NCAM00280M_.jpeg");
+
+	geometry = new THREE.PlaneGeometry(2,2,4);	
+	material = new THREE.MeshBasicMaterial({map: texture});
+	plane = new THREE.Mesh(geometry, material);
+	plane.layers.set(1);
+	object.add(plane);
+
+	object.position.y = 1.5;
+	object.position.z = -1.5;
+
+	scene.add(object);
+
+	texture = loader.load("models/NLB_524534514EDR_F0562034NCAM00280M_.jpeg");
+
+	geometry = new THREE.PlaneGeometry(2,2,4);	
+	material = new THREE.MeshBasicMaterial({map: texture});
+	plane = new THREE.Mesh(geometry, material);
+
+	plane.rotation.y = 1.57;
+	plane.position.y = 1.5;
+	plane.position.x = -1.5;
+	scene.add(plane);
+
+	var dracoLoader = new DRACOLoader();
+	dracoLoader.setDecoderPath('./js/lib/draco/gltf/');
+
+	var loader = new GLTFLoader();
+	loader.setDRACOLoader(dracoLoader);
+
+	loader.load( "./models/curiosity-524534514-jpg-draco.glb", function (gltf) {
+	mesh = gltf.scene;				
+
+	mesh.scale.set(0.5,0.5,0.5);
+	mesh.position.set(0.5,1.5,0);
+	mesh.rotation.set(0,-1.57,0);
+
+	scene.add( mesh );
+
+	} );
+
+}
+
+function animate() {
+
+	renderer.setAnimationLoop(render);
+
+}
+
+function render() {
+
+	renderer.render(scene, camera);
+
+}
+
+</script>
+</body>
+</html>
