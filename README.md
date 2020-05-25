@@ -66,6 +66,10 @@ Curiosity's location for Sol 1431.<br>
 
 https://mars.nasa.gov/resources/curiosity-rovers-location-for-sol-1431/
 
+Artist's scaled image for Sol 1432.<br>
+
+https://www.planetary.org/multimedia/space-images/mars/sean-doran-astronaut-sol1432ml002.html
+
 # Making Sol 1151 .glb (Feb 20, 2020)
 
 # References
