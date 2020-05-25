@@ -62,6 +62,10 @@ https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01431/opgs/
 
 Sometimes a left image is available but a matching right image is not available. Move to other images.<br>
 
+Curiosity's location for Sol 1431.<br>
+
+https://mars.nasa.gov/resources/curiosity-rovers-location-for-sol-1431/
+
 # Making Sol 1151 .glb (Feb 20, 2020)
 
 # References
